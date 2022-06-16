@@ -57,9 +57,9 @@ namespace FiscEmailAutomationToolV1
             this.tbApptNotes = new System.Windows.Forms.TextBox();
             this.lbVehicleType = new System.Windows.Forms.Label();
             this.cboBmwOrMini = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCreateCustEmail = new System.Windows.Forms.Button();
+            this.btnCreateDealerEmail = new System.Windows.Forms.Button();
+            this.btnClearForm = new System.Windows.Forms.Button();
             this.tbEmailSubject = new System.Windows.Forms.TextBox();
             this.tbEmailBody = new System.Windows.Forms.TextBox();
             this.lbEmailSubjectHeader = new System.Windows.Forms.Label();
@@ -262,8 +262,8 @@ namespace FiscEmailAutomationToolV1
             // 
             this.cboApptTimeAMPM.FormattingEnabled = true;
             this.cboApptTimeAMPM.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
+            "am",
+            "pm"});
             this.cboApptTimeAMPM.Location = new System.Drawing.Point(307, 278);
             this.cboApptTimeAMPM.Name = "cboApptTimeAMPM";
             this.cboApptTimeAMPM.Size = new System.Drawing.Size(47, 21);
@@ -281,7 +281,7 @@ namespace FiscEmailAutomationToolV1
             // lbDealershipNameHeader
             // 
             this.lbDealershipNameHeader.AutoSize = true;
-            this.lbDealershipNameHeader.Location = new System.Drawing.Point(167, 324);
+            this.lbDealershipNameHeader.Location = new System.Drawing.Point(192, 324);
             this.lbDealershipNameHeader.Name = "lbDealershipNameHeader";
             this.lbDealershipNameHeader.Size = new System.Drawing.Size(110, 13);
             this.lbDealershipNameHeader.TabIndex = 25;
@@ -291,18 +291,18 @@ namespace FiscEmailAutomationToolV1
             // 
             this.cboAppointmentType.FormattingEnabled = true;
             this.cboAppointmentType.Items.AddRange(new object[] {
-            "SHOWROOM",
-            "TELEPHONE"});
+            "SHOWROOM APPOINTMENT",
+            "TELEPHONE APPOINTMENT"});
             this.cboAppointmentType.Location = new System.Drawing.Point(32, 340);
             this.cboAppointmentType.Name = "cboAppointmentType";
-            this.cboAppointmentType.Size = new System.Drawing.Size(121, 21);
+            this.cboAppointmentType.Size = new System.Drawing.Size(154, 21);
             this.cboAppointmentType.TabIndex = 26;
             // 
             // tbDealershipName
             // 
-            this.tbDealershipName.Location = new System.Drawing.Point(170, 341);
+            this.tbDealershipName.Location = new System.Drawing.Point(195, 341);
             this.tbDealershipName.Name = "tbDealershipName";
-            this.tbDealershipName.Size = new System.Drawing.Size(225, 20);
+            this.tbDealershipName.Size = new System.Drawing.Size(200, 20);
             this.tbDealershipName.TabIndex = 27;
             // 
             // lbApptNotesHeader
@@ -336,39 +336,40 @@ namespace FiscEmailAutomationToolV1
             this.cboBmwOrMini.FormattingEnabled = true;
             this.cboBmwOrMini.Items.AddRange(new object[] {
             "BMW",
-            "MINI",
-            "(Vehicle not on eMaster)"});
+            "MINI"});
             this.cboBmwOrMini.Location = new System.Drawing.Point(230, 212);
             this.cboBmwOrMini.Name = "cboBmwOrMini";
-            this.cboBmwOrMini.Size = new System.Drawing.Size(165, 21);
+            this.cboBmwOrMini.Size = new System.Drawing.Size(72, 21);
             this.cboBmwOrMini.TabIndex = 31;
             // 
-            // button1
+            // btnCreateCustEmail
             // 
-            this.button1.Location = new System.Drawing.Point(32, 538);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 57);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Create Customer Email";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCreateCustEmail.Location = new System.Drawing.Point(32, 538);
+            this.btnCreateCustEmail.Name = "btnCreateCustEmail";
+            this.btnCreateCustEmail.Size = new System.Drawing.Size(81, 57);
+            this.btnCreateCustEmail.TabIndex = 32;
+            this.btnCreateCustEmail.Text = "Create Customer Email";
+            this.btnCreateCustEmail.UseVisualStyleBackColor = true;
+            this.btnCreateCustEmail.Click += new System.EventHandler(this.btnCreateCustEmail_Click);
             // 
-            // button2
+            // btnCreateDealerEmail
             // 
-            this.button2.Location = new System.Drawing.Point(180, 538);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 57);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Create Dealership Email";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCreateDealerEmail.Location = new System.Drawing.Point(180, 538);
+            this.btnCreateDealerEmail.Name = "btnCreateDealerEmail";
+            this.btnCreateDealerEmail.Size = new System.Drawing.Size(81, 57);
+            this.btnCreateDealerEmail.TabIndex = 33;
+            this.btnCreateDealerEmail.Text = "Create Dealership Email";
+            this.btnCreateDealerEmail.UseVisualStyleBackColor = true;
+            this.btnCreateDealerEmail.Click += new System.EventHandler(this.btnCreateDealerEmail_Click);
             // 
-            // button3
+            // btnClearForm
             // 
-            this.button3.Location = new System.Drawing.Point(314, 538);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 57);
-            this.button3.TabIndex = 34;
-            this.button3.Text = "Clear Form";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnClearForm.Location = new System.Drawing.Point(314, 538);
+            this.btnClearForm.Name = "btnClearForm";
+            this.btnClearForm.Size = new System.Drawing.Size(81, 57);
+            this.btnClearForm.TabIndex = 34;
+            this.btnClearForm.Text = "Clear Form";
+            this.btnClearForm.UseVisualStyleBackColor = true;
             // 
             // tbEmailSubject
             // 
@@ -379,6 +380,7 @@ namespace FiscEmailAutomationToolV1
             // 
             // tbEmailBody
             // 
+            this.tbEmailBody.AcceptsReturn = true;
             this.tbEmailBody.Location = new System.Drawing.Point(442, 135);
             this.tbEmailBody.Multiline = true;
             this.tbEmailBody.Name = "tbEmailBody";
@@ -412,9 +414,9 @@ namespace FiscEmailAutomationToolV1
             this.Controls.Add(this.lbEmailSubjectHeader);
             this.Controls.Add(this.tbEmailBody);
             this.Controls.Add(this.tbEmailSubject);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClearForm);
+            this.Controls.Add(this.btnCreateDealerEmail);
+            this.Controls.Add(this.btnCreateCustEmail);
             this.Controls.Add(this.cboBmwOrMini);
             this.Controls.Add(this.lbVehicleType);
             this.Controls.Add(this.tbApptNotes);
@@ -481,9 +483,9 @@ namespace FiscEmailAutomationToolV1
         private System.Windows.Forms.TextBox tbApptNotes;
         private System.Windows.Forms.Label lbVehicleType;
         private System.Windows.Forms.ComboBox cboBmwOrMini;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCreateCustEmail;
+        private System.Windows.Forms.Button btnCreateDealerEmail;
+        private System.Windows.Forms.Button btnClearForm;
         private System.Windows.Forms.TextBox tbEmailSubject;
         private System.Windows.Forms.TextBox tbEmailBody;
         private System.Windows.Forms.Label lbEmailSubjectHeader;

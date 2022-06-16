@@ -14,6 +14,7 @@ namespace FiscEmailAutomationToolV1
         public string carReg { get; set; }
         public string vehicleName { get; set; }
 
+        public string bmwOrMini { get; set; }
         public string custEmail { get; set; }
 
         public string newOrUsed { get; set; }
@@ -25,7 +26,9 @@ namespace FiscEmailAutomationToolV1
         //Appointment Info
         public string apptType { get; set; }
         public string apptDate { get; set; }
-        public string apptTime { get; set; }
+        public string apptTimeHour { get; set; }
+        public string apptTimeMin { get; set; }
+        public string apptTimeAmPm { get; set; }
         public string apptNotes { get; set; }
 
         public string dealershipName { get; set; }
@@ -43,6 +46,22 @@ namespace FiscEmailAutomationToolV1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
         }
+
     }
 }
+
+ //       static String morningAfternoon()
+  //      {
+            //int hour = DateTime.Now().hour;
+  //          if(DateTime.Now.Hour<12)
+  //          {
+   //             return "morning";
+    //        }
+     //       else
+      //      {
+     //           return "afternoon";
+      //      }
+                        
+        //  }
