@@ -52,16 +52,4 @@ namespace FiscEmailAutomationToolV1
     }
 }
 
- //       static String morningAfternoon()
-  //      {
-            //int hour = DateTime.Now().hour;
-  //          if(DateTime.Now.Hour<12)
-  //          {
-   //             return "morning";
-    //        }
-     //       else
-      //      {
-     //           return "afternoon";
-      //      }
-                        
-        //  }
+ 

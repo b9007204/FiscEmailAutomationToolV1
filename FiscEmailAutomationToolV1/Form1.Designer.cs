@@ -60,10 +60,10 @@ namespace FiscEmailAutomationToolV1
             this.btnCreateCustEmail = new System.Windows.Forms.Button();
             this.btnCreateDealerEmail = new System.Windows.Forms.Button();
             this.btnClearForm = new System.Windows.Forms.Button();
-            this.tbEmailSubject = new System.Windows.Forms.TextBox();
-            this.tbEmailBody = new System.Windows.Forms.TextBox();
             this.lbEmailSubjectHeader = new System.Windows.Forms.Label();
             this.lbEmailBodyHeader = new System.Windows.Forms.Label();
+            this.tbEmailSubject = new System.Windows.Forms.RichTextBox();
+            this.tbEmailBody = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // cboCustTitle
@@ -71,7 +71,7 @@ namespace FiscEmailAutomationToolV1
             this.cboCustTitle.FormattingEnabled = true;
             this.cboCustTitle.Items.AddRange(new object[] {
             "Mr",
-            "Mrs ",
+            "Mrs",
             "Miss",
             "Ms"});
             this.cboCustTitle.Location = new System.Drawing.Point(32, 85);
@@ -368,24 +368,9 @@ namespace FiscEmailAutomationToolV1
             this.btnClearForm.Name = "btnClearForm";
             this.btnClearForm.Size = new System.Drawing.Size(81, 57);
             this.btnClearForm.TabIndex = 34;
-            this.btnClearForm.Text = "Clear Form";
+            this.btnClearForm.Text = "Clear Form + Email";
             this.btnClearForm.UseVisualStyleBackColor = true;
-            // 
-            // tbEmailSubject
-            // 
-            this.tbEmailSubject.Location = new System.Drawing.Point(442, 86);
-            this.tbEmailSubject.Name = "tbEmailSubject";
-            this.tbEmailSubject.Size = new System.Drawing.Size(684, 20);
-            this.tbEmailSubject.TabIndex = 35;
-            // 
-            // tbEmailBody
-            // 
-            this.tbEmailBody.AcceptsReturn = true;
-            this.tbEmailBody.Location = new System.Drawing.Point(442, 135);
-            this.tbEmailBody.Multiline = true;
-            this.tbEmailBody.Name = "tbEmailBody";
-            this.tbEmailBody.Size = new System.Drawing.Size(684, 460);
-            this.tbEmailBody.TabIndex = 36;
+            this.btnClearForm.Click += new System.EventHandler(this.btnClearForm_Click);
             // 
             // lbEmailSubjectHeader
             // 
@@ -405,15 +390,31 @@ namespace FiscEmailAutomationToolV1
             this.lbEmailBodyHeader.TabIndex = 38;
             this.lbEmailBodyHeader.Text = "Email Body";
             // 
+            // tbEmailSubject
+            // 
+            this.tbEmailSubject.Location = new System.Drawing.Point(442, 86);
+            this.tbEmailSubject.Name = "tbEmailSubject";
+            this.tbEmailSubject.Size = new System.Drawing.Size(684, 20);
+            this.tbEmailSubject.TabIndex = 39;
+            this.tbEmailSubject.Text = "";
+            // 
+            // tbEmailBody
+            // 
+            this.tbEmailBody.Location = new System.Drawing.Point(442, 137);
+            this.tbEmailBody.Name = "tbEmailBody";
+            this.tbEmailBody.Size = new System.Drawing.Size(684, 383);
+            this.tbEmailBody.TabIndex = 40;
+            this.tbEmailBody.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1173, 627);
-            this.Controls.Add(this.lbEmailBodyHeader);
-            this.Controls.Add(this.lbEmailSubjectHeader);
             this.Controls.Add(this.tbEmailBody);
             this.Controls.Add(this.tbEmailSubject);
+            this.Controls.Add(this.lbEmailBodyHeader);
+            this.Controls.Add(this.lbEmailSubjectHeader);
             this.Controls.Add(this.btnClearForm);
             this.Controls.Add(this.btnCreateDealerEmail);
             this.Controls.Add(this.btnCreateCustEmail);
@@ -447,7 +448,7 @@ namespace FiscEmailAutomationToolV1
             this.Controls.Add(this.cboCustTitle);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Email Creator";
+            this.Text = "Fisc Email Automation Tool (FEAT) BETA (Version 1)";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,10 +487,10 @@ namespace FiscEmailAutomationToolV1
         private System.Windows.Forms.Button btnCreateCustEmail;
         private System.Windows.Forms.Button btnCreateDealerEmail;
         private System.Windows.Forms.Button btnClearForm;
-        private System.Windows.Forms.TextBox tbEmailSubject;
-        private System.Windows.Forms.TextBox tbEmailBody;
         private System.Windows.Forms.Label lbEmailSubjectHeader;
         private System.Windows.Forms.Label lbEmailBodyHeader;
+        private System.Windows.Forms.RichTextBox tbEmailSubject;
+        private System.Windows.Forms.RichTextBox tbEmailBody;
     }
 }
 
